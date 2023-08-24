@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(67,148,252,1) 54%, rgba(70,179,252,1) 99%);;
+
+}
+
+.wrapper {
+    background-color: white;
+    padding: 25px 25px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+
+}
+.input-box {
+    padding-top: 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.tweet-area  {
+    position: relative;
+    min-height: 130px;
+    max-height: 170px;
+    overflow-y: auto;
+}
+.editable {
+    position: relative;
+    z-index: 5;
+}
+.read-only {
+    background-color: transparent;
+    color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+.over-span {
+    background-color: #FF6666;
+}
+.tweet-area::-webkit-scrollbar { /* taşma olduğunda oluşan scrollbara erişiyor */
+    width: 0;
+}
+.tweet-area .placeholder {
+    color: #98A5B1;
+    position: absolute;
+   
+    font-size: 15px;
+    pointer-events: none;
+}
+.input {
+    outline: none;
+    min-height: inherit;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.input-box .privacy {
+    color: #1da1f2;
+    margin: 15px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 7px 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.privacy:hover, .icons li:hover{
+    background: #e7f5fe;
+}
+
+.bottom {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons li {
+    list-style: none;
+    margin: 0 2px;
+    font-size: 20px;
+    color: #1da1f2;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    font-weight: 500;
+    font-size: 30px;
+    color: #333;
+    margin-right: 15px;
+    border-right: 1px solid #aab8c2;
+    padding-right: 15px;
+    display: none;
+}
+.button  {
+    background-color: #1da1f2;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.5;
+    font-size: 15px;
+    font-weight: 700;
+    pointer-events: none;
+}
+.button:hover {
+    background-color: #0d8bd9;
+}
+.button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
